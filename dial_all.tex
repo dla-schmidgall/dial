@@ -1,0 +1,21 @@
+\documentclass[a4paper]{scrartcl}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[babel,german=guillemets]{csquotes}
+\usepackage[german]{varioref}
+\usepackage{baskervald}
+\usepackage[colorlinks=true, linkcolor=blue, filecolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+\usepackage[style=numeric, bibstyle=numeric, sorting=ynt, block=space, date=short, backend=biber]{biblatex}
+\addbibresource{../dial_20181105_ARCHEExport.bib}
+
+\title{dial v1.0}
+\subtitle{das digitale ilse aichinger literaturverzeichnis: PDF Export}
+\author{Andreas Dittrich}
+\date{Stand: {\today}}
+
+\begin{document}
+\maketitle
+\nocite{*}
+\printbibliography
+\end{document}
