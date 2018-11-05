@@ -6,6 +6,8 @@ Das Digitale Ilse Aichinger Literaturverzeichnis (dial) setzt sich zum Ziel, mö
 
 Die Datei `dial_(#date).bib` ist eine Textdatei, welche einer bestimmten Syntax folgt, die `BibLaTex` heißt (siehe dazu [ctan.org/pkg/biblatex](https://ctan.org/pkg/biblatex)). Sie kann entweder mit `LaTex` zum Beispiel in ein PDF gesetzt werden (siehe [Comprehensive TeX Archive Network](https://ctan.org/)) oder in Software importiert werden, welche das Format verarbeiten kann (beispielsweise [JabRef](https://www.jabref.org/) oder [Zotero](https://www.zotero.org/)).
 
+Der aktuellste Stand des `dial` ist auf [Wikidata](https://www.wikidata.org/wiki/Q54007056) abzurufen. Im [ARCHE-System](https://arche.acdh.oeaw.ac.at/) liegt eine Langzeitsicherung.
+
 ## Spezifische Erläuterungen
 
 Ein erkärtes Projektziel war es, auf eine pragmatische Weise mit der grundlegenden Idee des `FRBR`-Modells zu arbeiten. Im `FRBR`-Modell wird zwischen *Werk*, *Expression*, *Manifestation* und *Exemplar* unterschieden; was für die Zwecke dieses Projekts zu differenziert ist, dessen grundlegende Idee aber brauchbar erschien: die Möglichkeit, Texte, die vermutlich als 'die gleichen' anzusehen sind, miteinander in eine spezifische Verbindung zu bringen. Das Format [BIBFRAME](http://bibframe.org/) bietet ein vereinfachtes Vokabular des `FRBR`-Modells und wird -- neben der *Library of Congress* -- auch von der Deutschen Nationalbibliothek eingesetzt (siehe [DNB:bibframe](http://www.dnb.de/bibframe)).
@@ -24,9 +26,19 @@ Um speziell die Erstpublikationen leicht abfragbar zu machen, wurden nur die jew
 * prosepoetry
 * interview
 
-## Autor
+## Exports
 
-* **Andreas Dittrich** - *dial* - [dial@github](https://github.com/diaphon/dial)
+### PDF
+
+Der beigefügte PDF-Export ist mit `LaTex` und `BibLaTex` erzeugt worden. Die fortlaufende Nummerierung ist nur mit dieser spezifischen Bib-Datei stabil und sollte nicht als Referenz genommen werden. Eine Buchpublikation ist in Planung und soll eine gesicherte Referenzierung ermöglichen.
+
+### HTML
+
+Die `bib`-Datei kann auch mit einem Javascript von *pcooksey* [bibtex-js](https://github.com/pcooksey/bibtex-js) im Browser lokal durchsucht werden. Eine für das `dial` leicht adaptierte Version des Skripts kann auf Github unter [diaphon/dial](https://github.com/diaphon/dial) als heruntergeladen werden.
+
+## Signe
+
+Andreas Dittrich, Passau am 5.11.2018
 
 ## Lizenz
 

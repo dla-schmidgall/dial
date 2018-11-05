@@ -10,6 +10,8 @@ The file `dial_(#date).bib` is a text file which follows a certain syntax called
 
 A declared goal of the project was to work in a pragmatic way with the basic idea of the `FRBR` model. The `FRBR` model distinguishes between *work*, *expression*, *manifestation* and *example*; which is too differentiated for the purposes of this project, but whose basic idea seemed useful: the possibility to connect texts that are probably to be regarded as 'the same' to each other in a specific way. The format [BIBFRAME](http://bibframe.org/) offers a simplified vocabulary of the `FRBR` model and is also used -- besides the *Library of Congress* -- by the German National Library (see [DNB:bibframe](http://www.dnb.de/bibframe)).
 
+The latest version of the `dial` is available on [Wikidata](https://www.wikidata.org/wiki/Q54007056). The [ARCHE-System](https://arche.acdh.oeaw.ac.at/) contains a long-term backup.
+
 ### work entities & wikidata
 
 Das Feld `wikidata` ist nicht Teil der BibLaTex-Syntax. Das Projekt `dial` hat in Wikidata die Identifikationsnummer [Q54007056](https://www.wikidata.org/wiki/Q54007056). Darin werden alle Werk-Einheiten des `dial` gesammelt: jeweils mit einer eigenen Wikidata-ID. Wurde ein Werk öfter publiziert, so wird in der BibLaTex-Datei jeder Publikation die selbe Werk-ID gegeben. Dadurch werden die verschiedenen Publikationen miteinander verbunden; auf abstrakte Weise zu einer Werk-Einheit im Sinne des FRBR-Modells konstruiert.
@@ -26,9 +28,19 @@ In order to make the original publications more easily searchable, only the unit
 * prosepoetry
 * interview
 
-## Author
+## Exports
 
-* **Andreas Dittrich** - *dial* - [dial@github](https://github.com/diaphon/dial)
+### PDF
+
+The attached PDF export was created with `LaTex` and `BibLaTex`. The consecutive numbering is only stable with this specific Bib-file and should not be used as a reference. A book publication is planned and should allow a secure referencing.
+
+### HTML
+
+The `bib`-file can also be searched locally in the browser with a Javascript from *pcooksey* [bibtex-js](https://github.com/pcooksey/bibtex-js). A slightly for `dial` adapted version of the script can be downloaded from Github at [diaphon/dial](https://github.com/diaphon/dial).
+
+## Signe
+
+Andreas Dittrich, Passau on 5th of November 2018
 
 ## License
 
