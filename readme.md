@@ -34,7 +34,7 @@ Der beigefügte PDF-Export ist mit `LaTex` und `BibLaTex` erzeugt worden. Die fo
 
 ### HTML
 
-Die `bib`-Datei kann auch mit einem Javascript von *pcooksey* [bibtex-js](https://github.com/pcooksey/bibtex-js) im Browser lokal durchsucht werden. Eine für das `dial` leicht adaptierte Version des Skripts kann auf Github unter [diaphon/dial](https://github.com/diaphon/dial) als heruntergeladen werden.
+Die `bib`-Datei kann auch mit einem Javascript von *pcooksey* [bibtex-js](https://github.com/pcooksey/bibtex-js) im Browser lokal durchsucht werden. Eine für das `dial` leicht adaptierte Version des Skripts kann auf Github unter [diaphon/dial](https://github.com/diaphon/dial)heruntergeladen werden.
 
 ## Signe
 
