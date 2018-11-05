@@ -22,7 +22,7 @@
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
     <script src="jquery.min.js"></script>
     <script src="bibtex_js.js" type="text/javascript" charset="utf-8"></script>
-    <bibtex src="AichingerBibliographie.bib"></bibtex>
+    <bibtex src="dial.bib"></bibtex>
     <!-- <bibtex src="testbib.bib"></bibtex> -->
     
     <script>
@@ -57,7 +57,11 @@
 	    #bibtex_errors { margin-top:10px; color: red; }
 	    h1.header { margin-left:8px; }
 	    h1.YEAR { font-size: 17px; font-weight: bold; display: inline; margin-left:8px; text-decoration: none; }
-	    a { font-weight: bold; background-color: #f5f5dc; color: black; }
+	    a { font-weight: bold; background-color: #dddddd; color: black; }
+	    ul {
+	    	list-style: none;
+	    	padding-bottom: .6em;
+	    }
     </style>
     
     <!-- Latest compiled and minified CSS -->
@@ -67,13 +71,22 @@
 <body style="margin-left: 5%; font-family: Courier New;">
 <a name="top"></a>
 
-<h1 class="header">d i a l</h1>
-<h2 style="font-size: 17px; font-style: italic; padding-left: .5em;">digitales ilse aichinger literaturverzeichnis. v1.0</h2>
-
-<a href="index.html" style="background-color: transparent;"><img src="rotary_dial.png" style="max-width: 100%;"></a>
 
 
-<div class="container-fluid">
+
+<div style="text-align: center; max-width: 50em;">
+
+	<h1 class="header" style="white-space: nowrap;">d i a l</h1>
+
+	<!-- <a href="index.html" style="background-color: transparent;"> -->
+		<img src="rotary_dial.png" style="max-width: 100%; ">
+	<!-- </a> -->
+	<!-- https://commons.wikimedia.org/wiki/File:Rotary_Dial_Front.jpg -->
+
+	<h2 style="font-size: 17px; font-style: italic; padding-left: .5em; padding-bottom: 1em;">digitales ilse aichinger literaturverzeichnis. <b>v0.9</b></h2>
+
+
+ <div class="container-fluid">
 	<div class="searchbar">
 <!-- 		<div style="float:left;">
 			<select id="authorselectfirst" class="btn bibtex_search bibtex_author" style="border: 1px solid lightgrey;" extra="first" search="author">
@@ -94,25 +107,27 @@
 			  <option value="Hoffnung">Hoffnung</option>
 			</select>
 		</div> -->
-		<div style="float:left;">
 			<input type="text" class="bibtex_search form-control" id="searchbar" placeholder="dial durchsuchen, laden kann etwas dauern …">
-			<span class="help-block">Zum Beispiel: ver rat (findet alle Texte, in denen beide vorkommen)</span>
-		</div>
-		<div style="float:left;">
-			<button type="button" class="btn btn-default" onclick="reset()">Zurücksetzen</button>
-		</div>
+			<span class="help-block" style="float: left;"><!-- Zum Beispiel: ver rat (findet alle Texte, in denen beide vorkommen) --></span>
+
+<!-- = Reset-Button		
+			<div style="float:left;">
+			  <button type="button" class="btn btn-default" onclick="reset()">Zurücksetzen</button>
+		    </div>
+ -->
 	</div>
+ </div>
+
 </div>
 
-
 <div class="bibtex_structure">
-  <div class="group year" extra="ASC number">
+  <!-- <div class="group year" extra="ASC number"> -->
   	  <a href="#top" style="display: inline"><em><!-- (Seitenanfang) --></em></a>
   	  <div style="padding-bottom:10px;"></div>
   	  <div class="sort journal" extra="DESC string">
       	<div class="templates"></div>
       </div>
-  </div>
+  <!-- </div> -->
 </div>
 
 <div id="bibtex_display">
@@ -162,5 +177,9 @@
 </div>
 <!-- Latest compiled and minified JavaScript -->
 <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+
+
+
+
 </body>
 </html>
