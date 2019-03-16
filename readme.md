@@ -1,24 +1,24 @@
 # Das Digitale Ilse Aichinger Literaturverzeichnis
 
-Das Digitale Ilse Aichinger Literaturverzeichnis (dial) setzt sich zum Ziel, möglichst alle publizierten Texte von Ilse Aichinger (1921-2016) bibliographisch zu verzeichnen. Eine vollständige subjektive Personalbibliographie ist bislang nicht geleistet worden (vgl. die Bibliographien von Reichensperger 1995 ff. und Karnahl 2007). Für das dial wurden Bestände verschiedener Archive durchsucht: das Deutsche Literaturarchiv Marbach, das Innsbrucker Zeitungsarchiv, das Medienarchiv des Österreichischen Rundfunks, das Literaturarchiv der Österreichischen Nationalbibliothek und das Otl Aicher Archiv der Hochschule für Gestaltung. Das dial umfasst damit 1813 Einträge (erweiterbar), wovon 639 als Erstpublikationen und als Werkeinheiten zu verstehen sind.
+Das Digitale Ilse Aichinger Literaturverzeichnis (`dial`) setzt sich zum Ziel, möglichst alle publizierten Texte von Ilse Aichinger (1921-2016) bibliografisch zu verzeichnen. Eine vollständige subjektive Personalbibliografie ist bislang nicht geleistet worden. Für das `dial` wurden Bestände verschiedener Archive durchsucht: vor allem die Bestände am _Deutschen Literaturarchiv Marbach_, welches das Projekt auch mit einem Stipendium gefördert hat. Das `dial` umfasst damit 1834 Einträge, von denen 641 Einträge als Erstpublikationen und als Werkeinheiten zu verstehen sind.
 
 ## Voraussetzungen und Verwendungsmöglichkeiten
 
-Die Datei `dial_(#date).bib` ist eine Textdatei, welche einer bestimmten Syntax folgt, die `BibLaTex` heißt (siehe dazu [ctan.org/pkg/biblatex](https://ctan.org/pkg/biblatex)). Sie kann entweder mit `LaTex` zum Beispiel in ein PDF gesetzt werden (siehe [Comprehensive TeX Archive Network](https://ctan.org/)) oder in Software importiert werden, welche das Format verarbeiten kann (beispielsweise [JabRef](https://www.jabref.org/) oder [Zotero](https://www.zotero.org/)).
+Die Datei `dial_(#date).bib` ist eine Textdatei, welche einer bestimmten Syntax folgt, die `BibLaTex` heißt (siehe dazu [ctan.org/pkg/biblatex](https://ctan.org/pkg/biblatex)). Sie kann entweder mit `LaTex` zum Beispiel in ein `PDF` gesetzt werden (siehe [Comprehensive TeX Archive Network](https://ctan.org/)) oder in Software importiert werden, welche das Format verarbeiten kann (beispielsweise [JabRef](https://www.jabref.org/) oder [Zotero](https://www.zotero.org/)).
 
-Der aktuellste Stand des `dial` ist auf [Wikidata](https://www.wikidata.org/wiki/Q54007056) abzurufen. Im [ARCHE-System](https://arche.acdh.oeaw.ac.at/) liegt eine Langzeitsicherung.
+Im Langzeitarchiv der _Österreichischen Akademie der Wissenschaften_ [ARCHE](https://arche.acdh.oeaw.ac.at/) wird der aktuelle Stand des `dial` gesichert. Zusätzlich wurde es auf [Wikidata](https://www.wikidata.org) ([Q54007056](https://www.wikidata.org/wiki/Q54007056)) mit dem entsprechenden Vokabular importiert, sodass die bibliografischen Daten dort offen zugänglich und veränderbar sind.
 
 ## Spezifische Erläuterungen
 
-Ein erkärtes Projektziel war es, auf eine pragmatische Weise mit der grundlegenden Idee des `FRBR`-Modells zu arbeiten. Im `FRBR`-Modell wird zwischen *Werk*, *Expression*, *Manifestation* und *Exemplar* unterschieden; was für die Zwecke dieses Projekts zu differenziert ist, dessen grundlegende Idee aber brauchbar erschien: die Möglichkeit, Texte, die vermutlich als 'die gleichen' anzusehen sind, miteinander in eine spezifische Verbindung zu bringen. Das Format [BIBFRAME](http://bibframe.org/) bietet ein vereinfachtes Vokabular des `FRBR`-Modells und wird -- neben der *Library of Congress* -- auch von der Deutschen Nationalbibliothek eingesetzt (siehe [DNB:bibframe](http://www.dnb.de/bibframe)).
+Ein erklärtes Projektziel war es, auf eine pragmatische Weise mit der grundlegenden Idee des `FRBR`-Modells zu arbeiten. Im `FRBR`-Modell wird zwischen *Werk*, *Expression*, *Manifestation* und *Exemplar* unterschieden; was für die Zwecke dieses Projekts zu differenziert ist, dessen grundlegende Idee aber brauchbar erschien: die Möglichkeit, Texte, die vermutlich als 'die gleichen' anzusehen sind, miteinander in eine spezifische Verbindung zu bringen. Schließlich wurde die Plattform _Wikidata_ verwendet, da diese eine offene und erweiterbare Infrastruktur bietet.
 
-### Werkeinheiten & wikidata
+### Werkeinheiten & Wikidata
 
-Das Feld `wikidata` ist nicht Teil der BibLaTex-Syntax. Das Projekt `dial` hat in Wikidata die Identifikationsnummer [Q54007056](https://www.wikidata.org/wiki/Q54007056). Darin werden alle Werk-Einheiten des `dial` gesammelt: jeweils mit einer eigenen Wikidata-ID. Wurde ein Werk öfter publiziert, so wird in der BibLaTex-Datei jeder Publikation die selbe Werk-ID gegeben. Dadurch werden die verschiedenen Publikationen miteinander verbunden; auf abstrakte Weise zu einer Werk-Einheit im Sinne des FRBR-Modells konstruiert.
+Die Datei mit der Endung `bib` folgt im Wesentlichen der Syntax von `BibLaTex`, erweitert diese aber um das Feld Feld `wikidata`, welches von Parsern einfach ignoriert werden kann. Unter der _Wikidata_-ID [Q54007056](https://www.wikidata.org/wiki/Q54007056) werden alle Werkeinheiten des `dial` gesammelt: jeweils mit einer eigenen _Wikidata_-ID. Wurde ein Werk öfter publiziert, so wird in der BibLaTex-Datei jeder Publikation dieselbe Werk-ID gegeben. Dadurch werden die verschiedenen Publikationen miteinander verbunden.
 
 ### Erstpublikationen und Gattung
 
-Um speziell die Erstpublikationen leicht abfragbar zu machen, wurden nur die jeweils als Erstausgabe angesehenen Einheiten mit einem Gattungsbegriff versehen. Folgende Gattungsbezeichnungen wurden verwendet:
+Um speziell die Erstpublikationen leicht abfragbar zu machen, wurden nur die jeweils als Erstausgabe angesehenen Einheiten (im Feld `keywords`) mit einem Gattungsbegriff versehen. Folgende Gattungsbezeichnungen wurden dabei verwendet:
 
 * prose
 * verse
@@ -26,33 +26,33 @@ Um speziell die Erstpublikationen leicht abfragbar zu machen, wurden nur die jew
 * prosepoetry
 * interview
 
-## Exports
-
 ### PDF
 
 Der beigefügte PDF-Export ist mit `LaTex` und `BibLaTex` erzeugt worden. Die fortlaufende Nummerierung ist nur mit dieser spezifischen Bib-Datei stabil und sollte nicht als Referenz genommen werden. Eine Buchpublikation ist in Planung und soll eine gesicherte Referenzierung ermöglichen.
 
 ### HTML
 
-Die `bib`-Datei kann auch mit einem Javascript von *pcooksey* [bibtex-js](https://github.com/pcooksey/bibtex-js) im Browser lokal durchsucht werden. Eine für das `dial` leicht adaptierte Version des Skripts kann auf Github unter [diaphon/dial](https://github.com/diaphon/dial)heruntergeladen werden.
+Die `bib`-Datei kann auch mit einem Javascript von *pcooksey* [bibtex-js](https://github.com/pcooksey/bibtex-js) im Browser lokal durchsucht werden. Eine für das `dial` leicht adaptierte Version des Skripts kann auf Github unter [diaphon/dial](https://github.com/diaphon/dial) heruntergeladen werden.
+
+## weiterführendes
+
+Ausführlichere Informationen sind in meinem Artikel der _Proceedings_ zur Tagung _digital humanities austria 2018_ (`dha2018`) zu finden.
 
 ## Signe
 
-Andreas Dittrich, Passau am 5.11.2018
+Andreas Dittrich, Marbach am Neckar, am 16.3.2019
 
 ## Lizenz
 
-Dieses Projekt steht unter der Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Lizenz: [CC BY-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/).
+Dieses Projekt steht unter der Lizenz CC BY, das heißt, dass es geteilt und bearbeitet werden darf, solange der Urheber genannt wird (vgl. [CC BY](https://creativecommons.org/licenses/by/3.0/)).
 
 ## Danksagung
 
-Dieses Projekt wurde ermöglicht durch das *Digital Humanities* Stipendium des [Forschungsverbund MWW](http://www.mww-forschung.de/). 
+Ermöglicht wurde das `dial` durch das _Digital Humanities_ Stipendium des [Forschungsverbund MWW](http://www.mww-forschung.de/), dem ich zum Dank verpflichtet bin. Zusätzlich gebührt mein Dank den Beschäftigten des DLA (insbesondere Laura Marie Pohlmann und Karin Schmidgall) und:
 
-Ich bin folgenden Institutionen für ihre Kooperation und Hilfsbereitschaft dankbar:
-I am grateful to the following institutions for their cooperation and helpfulness:
+* Hanno Biber des `ICLTT/AC` an der Österreichischen Akademie der Wissenschaften,
+* Martina Trognitz des `ACDH` der _Österreichischen Akademie der Wissenschaften_,
+* Martin Mäntele der _Hochschule für Gestaltung_ (Ulm) und
+* den Beschäftigten des _Innsbrucker Zeitungsarchivs_ (IZA).
 
-* Deutsches Literaturarchiv (DLA) Marbach
-* Hochschule für Gestaltung (Ulm)
-* Innsbrucker Zeitungsarchiv (IZA)
-
-Ohne die Unterstützung von Christine Ivanovic hätte dieses Projekt erst garnicht richtig anfangen können: herzlichen Dank!
+Vor allem gebührt mein Dank aber der Unterstützung von Christine Ivanovic (_Universität Wien_), ohne die das Projekt erst gar nicht anfangen hätte können: herzlichen Dank!
