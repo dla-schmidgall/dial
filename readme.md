@@ -1,12 +1,12 @@
 # Das Digitale Ilse Aichinger Literaturverzeichnis
 
-Das Digitale Ilse Aichinger Literaturverzeichnis (`dial`) setzt sich zum Ziel, möglichst alle publizierten Texte von Ilse Aichinger (1921-2016) bibliografisch zu verzeichnen. Eine vollständige subjektive Personalbibliografie ist bislang nicht geleistet worden. Für das `dial` wurden Bestände verschiedener Archive durchsucht: vor allem die Bestände am _Deutschen Literaturarchiv Marbach_, welches das Projekt auch mit einem Stipendium gefördert hat. Das `dial` umfasst damit 1834 Einträge, von denen 641 Einträge als Erstpublikationen und als Werkeinheiten zu verstehen sind.
+Das Digitale Ilse Aichinger Literaturverzeichnis (`dial`) setzt sich zum Ziel, möglichst alle publizierten Texte von Ilse Aichinger (1921-2016) bibliografisch zu verzeichnen. Eine vollständige subjektive Personalbibliografie ist bislang nicht geleistet worden. Für das `dial` wurden Bestände verschiedener Archive durchsucht: vor allem die Bestände am _Deutschen Literaturarchiv Marbach_, welches das Projekt auch mit einem Stipendium gefördert hat. Das `dial` umfasst damit 1834 Einträge, von denen 642 Einträge als Erstpublikationen und als Werkeinheiten zu verstehen sind.
 
 ## Voraussetzungen und Verwendungsmöglichkeiten
 
 Die Datei `dial_(#date).bib` ist eine Textdatei, welche einer bestimmten Syntax folgt, die `BibLaTex` heißt (siehe dazu [ctan.org/pkg/biblatex](https://ctan.org/pkg/biblatex)). Sie kann entweder mit `LaTex` zum Beispiel in ein `PDF` gesetzt werden (siehe [Comprehensive TeX Archive Network](https://ctan.org/)) oder in Software importiert werden, welche das Format verarbeiten kann (beispielsweise [JabRef](https://www.jabref.org/) oder [Zotero](https://www.zotero.org/)).
 
-Im Langzeitarchiv der _Österreichischen Akademie der Wissenschaften_ [ARCHE](https://arche.acdh.oeaw.ac.at/) wird der aktuelle Stand des `dial` gesichert. Zusätzlich wurde es auf [Wikidata](https://www.wikidata.org) ([Q54007056](https://www.wikidata.org/wiki/Q54007056)) mit dem entsprechenden Vokabular importiert, sodass die bibliografischen Daten dort offen zugänglich und veränderbar sind.
+Im Langzeitarchiv der _Österreichischen Akademie der Wissenschaften_ [ARCHE](https://arche.acdh.oeaw.ac.at/) wird der derzeitige Stand des `dial` gesichert (Repository ID: _dial_12450_). Zusätzlich wurde es auf [Wikidata](https://www.wikidata.org) ([Q54007056](https://www.wikidata.org/wiki/Q54007056)) mit dem entsprechenden Vokabular importiert, sodass die bibliografischen Daten dort offen zugänglich und veränderbar sind.
 
 ## Spezifische Erläuterungen
 
