@@ -4,7 +4,7 @@ The _Digital Ilse Aichinger List of Literature_ (`dial`) aims at bibliographical
 
 ## Prerequisites and how to use
 
-The file `dial_[#date].bib` is a text file which follows a certain syntax called `BibLatex` (see [ctan.org/pkg/BibLatex](https://ctan.org/pkg/BibLatex)). It can either be set with `Latex` for example into a `PDF` (see [Comprehensive TeX Archive Network](https://ctan.org/)) or imported into software which can process the format (for example [JabRef](https://www.jabref.org/)).
+The file `dial_[#date].bib` is a text file which follows the syntax of `BibLatex` (see [ctan.org/pkg/BibLatex](https://ctan.org/pkg/BibLatex)). It can either be set with `Latex` for example into a `PDF` (see [Comprehensive TeX Archive Network](https://ctan.org/)) or imported into software which can process the format (for example [JabRef](https://www.jabref.org/)).
 
 In the long-term archive of the _Austrian Academy of Sciences_ [ARCHE](https://arche.acdh.oeaw.ac.at/) the current state of the `dial` is stored (Repository ID: _dial_12450_). In addition, it was imported to [Wikidata](https://www.wikidata.org) ([Q54007056](https://www.wikidata.org/wiki/Q54007056)) with the corresponding vocabulary, so that the bibliogaphical data are openly accessible and changeable.
 
