@@ -1,16 +1,16 @@
 # Das Digitale Ilse Aichinger Literaturverzeichnis
 
-Das Digitale Ilse Aichinger Literaturverzeichnis (`dial`) setzt sich zum Ziel, möglichst alle publizierten Texte von Ilse Aichinger (1921-2016) bibliografisch zu verzeichnen. Eine vollständige subjektive Personalbibliografie ist bislang nicht geleistet worden. Für das `dial` wurden Bestände verschiedener Archive durchsucht: vor allem die Bestände am _Deutschen Literaturarchiv Marbach_, welches das Projekt auch mit einem Stipendium gefördert hat. Das `dial` umfasst damit 1834 Einträge, von denen 642 Einträge als Erstpublikationen und als Werkeinheiten zu verstehen sind.
+Das _Digitale Ilse Aichinger Literaturverzeichnis_ (`dial`) setzt sich zum Ziel, möglichst alle publizierten Texte von Ilse Aichinger (1921-2016) bibliografisch zu verzeichnen. Eine vollständige subjektive Personalbibliografie ist bislang nicht geleistet worden. Für das `dial` wurden Bestände verschiedener Archive und Kataloge durchsucht; vor allem aber die Bestände am _Deutschen Literaturarchiv Marbach_, welches das Projekt über den _Forschungsverbund MWW_ auch mit einem Stipendium gefördert hat. Das `dial` umfasst 1834 Einträge, von denen 642 Einträge als Erstpublikationen bzw. Werkeinheiten zu verstehen sind (Stand: März 2019).
 
 ## Voraussetzungen und Verwendungsmöglichkeiten
 
-Die Datei `dial_(#date).bib` ist eine Textdatei, welche einer bestimmten Syntax folgt, die `BibLaTex` heißt (siehe dazu [ctan.org/pkg/biblatex](https://ctan.org/pkg/biblatex)). Sie kann entweder mit `LaTex` zum Beispiel in ein `PDF` gesetzt werden (siehe [Comprehensive TeX Archive Network](https://ctan.org/)) oder in Software importiert werden, welche das Format verarbeiten kann (beispielsweise [JabRef](https://www.jabref.org/) oder [Zotero](https://www.zotero.org/)).
+Die Datei `dial_[#date].bib` ist eine Textdatei, welche einer bestimmten Syntax folgt, die `BibLaTex` heißt (siehe dazu [ctan.org/pkg/biblatex](https://ctan.org/pkg/biblatex)). Sie kann entweder mit `LaTex` zum Beispiel in ein `PDF` gesetzt werden (siehe [Comprehensive TeX Archive Network](https://ctan.org/)) oder in Software importiert werden, welche das Format verarbeiten kann (beispielsweise [JabRef](https://www.jabref.org/)).
 
-Im Langzeitarchiv der _Österreichischen Akademie der Wissenschaften_ [ARCHE](https://arche.acdh.oeaw.ac.at/) wird der derzeitige Stand des `dial` gesichert (Repository ID: _dial_12450_). Zusätzlich wurde es auf [Wikidata](https://www.wikidata.org) ([Q54007056](https://www.wikidata.org/wiki/Q54007056)) mit dem entsprechenden Vokabular importiert, sodass die bibliografischen Daten dort offen zugänglich und veränderbar sind.
+Im Langzeitarchiv der _Österreichischen Akademie der Wissenschaften_ [ARCHE](https://arche.acdh.oeaw.ac.at/) wird der derzeitige Stand des `dial` gesichert (Repository ID: _dial_12450_). Zusätzlich wird es auf [Wikidata](https://www.wikidata.org) ([Q54007056](https://www.wikidata.org/wiki/Q54007056)) mit dem entsprechenden Vokabular importiert, sodass die bibliografischen Daten dort offen zugänglich und veränderbar sind.
 
 ## Spezifische Erläuterungen
 
-Ein erklärtes Projektziel war es, auf eine pragmatische Weise mit der grundlegenden Idee des `FRBR`-Modells zu arbeiten. Im `FRBR`-Modell wird zwischen *Werk*, *Expression*, *Manifestation* und *Exemplar* unterschieden; was für die Zwecke dieses Projekts zu differenziert ist, dessen grundlegende Idee aber brauchbar erschien: die Möglichkeit, Texte, die vermutlich als 'die gleichen' anzusehen sind, miteinander in eine spezifische Verbindung zu bringen. Schließlich wurde die Plattform _Wikidata_ verwendet, da diese eine offene und erweiterbare Infrastruktur bietet.
+Ein erklärtes Projektziel war es, auf eine pragmatische Weise mit der grundlegenden Idee des `FRBR`-Modells zu arbeiten. Im `FRBR`-Modell wird zwischen _Werk_, _Expression_, _Manifestation_ und _Exemplar_ unterschieden; was für die Zwecke dieses Projekts zu differenziert ist, dessen grundlegende Idee aber brauchbar erschien: die Möglichkeit, Texte, die vermutlich als 'die gleichen' anzusehen sind, miteinander in eine spezifische Verbindung zu bringen. Schließlich wurde die Plattform _Wikidata_ verwendet, da diese eine offene und erweiterbare Infrastruktur bietet.
 
 ### Werkeinheiten & Wikidata
 
@@ -32,7 +32,7 @@ Der beigefügte PDF-Export ist mit `LaTex` und `BibLaTex` erzeugt worden. Die fo
 
 ### HTML
 
-Die `bib`-Datei kann auch mit einem Javascript von *pcooksey* [bibtex-js](https://github.com/pcooksey/bibtex-js) im Browser lokal durchsucht werden. Eine für das `dial` leicht adaptierte Version des Skripts kann auf Github unter [diaphon/dial](https://github.com/diaphon/dial) heruntergeladen werden.
+Die `bib`-Datei kann auch mit einem Javascript von _pcooksey_ [bibtex-js](https://github.com/pcooksey/bibtex-js) im Browser lokal durchsucht werden. Eine für das `dial` leicht adaptierte Version des Skripts kann auf Github unter [diaphon/dial](https://github.com/diaphon/dial) heruntergeladen werden.
 
 ## weiterführendes
 
@@ -40,7 +40,7 @@ Ausführlichere Informationen sind in meinem Artikel der _Proceedings_ zur Tagun
 
 ## Signe
 
-Andreas Dittrich, Marbach am Neckar, am 16.3.2019
+Andreas Dittrich, Marbach am Neckar, am 17.3.2019
 
 ## Lizenz
 

@@ -1,10 +1,10 @@
 # The Digital Ilse Aichinger List of Literature (`dial`)
 
-The _Digital Ilse Aichinger List of Literature_ (`dial`) aims at bibliographically listing as many published texts as possible by Ilse Aichinger (1921-2016). A complete bibliography has not yet been provided. Holdings of various archives were searched, above all from the _Deutsches Literaturarchiv Marbach_ (`DLA`), who also funded the project with a fellowship. The `dial` thus comprises 1834 entries (extendible) at the moment, 642 of which are to be understood as original publications and thus as work entities.
+The _Digital Ilse Aichinger List of Literature_ (`dial`) aims at bibliographically listing as many published texts as possible by Ilse Aichinger (1921-2016). A complete bibliography has not yet been provided. Holdings of various archives and catalogs were searched, above all from the _Deutsches Literaturarchiv Marbach_ (`DLA`), who also funded the project within the framework of the _Forschungsverbund MWW_ with a fellowship. The `dial` thus comprises 1834 entries (extendible) at the moment, 642 of which are to be understood as original publications and thus as work entities (as of March 2019).
 
 ## Prerequisites and how to use
 
-The file `dial_(#date).bib` is a text file which follows a certain syntax called `BibLatex` (see [ctan.org/pkg/BibLatex](https://ctan.org/pkg/BibLatex)). It can either be set with `Latex` for example into a `PDF` (see [Comprehensive TeX Archive Network](https://ctan.org/)) or imported into software which can process the format (for example [JabRef](https://www.jabref.org/) or [Zotero](https://www.zotero.org/)).
+The file `dial_[#date].bib` is a text file which follows a certain syntax called `BibLatex` (see [ctan.org/pkg/BibLatex](https://ctan.org/pkg/BibLatex)). It can either be set with `Latex` for example into a `PDF` (see [Comprehensive TeX Archive Network](https://ctan.org/)) or imported into software which can process the format (for example [JabRef](https://www.jabref.org/)).
 
 In the long-term archive of the _Austrian Academy of Sciences_ [ARCHE](https://arche.acdh.oeaw.ac.at/) the current state of the `dial` is stored (Repository ID: _dial_12450_). In addition, it was imported to [Wikidata](https://www.wikidata.org) ([Q54007056](https://www.wikidata.org/wiki/Q54007056)) with the corresponding vocabulary, so that the bibliogaphical data are openly accessible and changeable.
 
@@ -36,7 +36,7 @@ The attached PDF export was created with `LaTex` and `BibLaTex`. Consecutive num
 
 ### HTML
 
-The `bib` file can also be searched locally in the browser with a `JavaScript`-script from *pcooksey* [bibtex-js](https://github.com/pcooksey/bibtex-js). A slightly adapted version of the script for `dial` can be downloaded from `Github` at [diaphon/dial](https://github.com/diaphon/dial).
+The `bib` file can also be searched locally in the browser with a `JavaScript`-script from _pcooksey_ [bibtex-js](https://github.com/pcooksey/bibtex-js). A slightly adapted version of the script for `dial` can be downloaded from `Github` at [diaphon/dial](https://github.com/diaphon/dial).
 
 ## further reading
 
@@ -44,7 +44,7 @@ More detailed information can be found in my article of the _Proceedings_ for th
 
 ## Signe
 
-Andreas Dittrich, Marbach am Neckar, am 16.3.2019
+Andreas Dittrich, Marbach am Neckar, am 17.3.2019
 
 ## License
 
