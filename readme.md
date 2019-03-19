@@ -50,7 +50,7 @@ Dieses Projekt steht unter der Lizenz CC BY, das heißt, dass es geteilt und bea
 
 Ermöglicht wurde das `dial` durch das _Digital Humanities_ Stipendium des [Forschungsverbund MWW](http://www.mww-forschung.de/), dem ich zum Dank verpflichtet bin. Zusätzlich gebührt mein Dank den Beschäftigten des DLA (insbesondere Laura Marie Pohlmann und Karin Schmidgall) und:
 
-* Hanno Biber des `ICLTT/AC` an der Österreichischen Akademie der Wissenschaften,
+* Hanno Biber des `ICLTT/AC` an der _Österreichischen Akademie der Wissenschaften_,
 * Martina Trognitz des `ACDH` der _Österreichischen Akademie der Wissenschaften_,
 * Martin Mäntele der _Hochschule für Gestaltung_ (Ulm) und
 * den Beschäftigten des _Innsbrucker Zeitungsarchivs_ (IZA).
