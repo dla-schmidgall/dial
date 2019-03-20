@@ -30,6 +30,14 @@ with open("dial.js", "w") as fh:
 			entry['Erstpublikation'] = 'ja'
 		else:
 			entry['Erstpublikation'] = 'nein'
+		# Genre eintragen
+		if 'keywords' not in entry:
+			# Genre aus dem Werk-Element mit selber wikidata-ID holen:
+			for entry2 in bibdb.entries:
+				if 'keywords' in entry2 and entry2['wikidata'] == entry['wikidata']:
+					entry['genre'] = entry2['keywords']
+		else:
+			entry['genre'] = entry['keywords']
 		# Datum > Jahr & Jahrzehnt:
 		if 'date' in entry:
 			if re.findall('^\d+', entry['date']):
@@ -53,24 +61,20 @@ with open("dial.js", "w") as fh:
 			else:
 				entry['ENTRYTYPE'] = 'sonstiges'
 		# multiple Autoren:
-		if re.findall(' AND ', entry['author']):
+		if 'author' in entry:
 			entry['author'] = re.split(' AND ', entry['author'])
 		# multiple Buch-Autoren:
 		if 'bookauthor' in entry:
-			if re.findall(' AND ', entry['bookauthor']):
-				entry['bookauthor'] = re.split(' AND ', entry['bookauthor'])
+			entry['bookauthor'] = re.split(' AND ', entry['bookauthor'])
 		# multiple Orte:
 		if 'location' in entry:
-			if re.findall(' AND ', entry['location']):
-				entry['location'] = re.split(' AND ', entry['location'])
+			entry['location'] = re.split(' AND ', entry['location'])
 		# multiple Verlage:
 		if 'publisher' in entry:
-			if re.findall(' AND ', entry['publisher']):
-				entry['publisher'] = re.split(' AND ', entry['publisher'])
+			entry['publisher'] = re.split(' AND ', entry['publisher'])
 		# multiple Herausgeber:
 		if 'editor' in entry:
-			if re.findall(' AND ', entry['editor']):
-				entry['editor'] = re.split(' AND ', entry['editor'])
+			entry['editor'] = re.split(' AND ', entry['editor'])
 		# Schreiben:
 		for element in entry:
 			if isinstance(entry[element], str):

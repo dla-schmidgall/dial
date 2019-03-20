@@ -23,31 +23,31 @@
 <link href="bootstrap.min.css" rel="stylesheet"/>
 
 <div id="el">
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container" style="padding-left: 15em;">
-      <div id="navbar">
-        <form class="navbar-form navbar-left">
-          <div class="form-group">
-            <input type="text" v-model="query" class="form-control" placeholder="Search">
-          </div>
-        </form>
-      </div><!--/.nav-collapse -->
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#" v-on:click="reset()">reset</a>
-      </div>
-    </div>
-  </nav>
-
   <div class="container" style="margin-top: 50px;">
 
-    <h1 style="font-family: monospace;"><img src="rotary_dial.png" style="width: 1em;"> dial</h1>
-
-    <!-- <p class="text-muted">Search performed in {{ searchResult.timings.search }} ms, facets in {{ searchResult.timings.facets }} ms</p> -->
+<a href="#" v-on:click="reset()">
+<table style="width:100%;">
+  <tr>
+    <td style="width: 16.6%"><div style="display: flex; justify-content: center; align-items: center;">
+      <img src="rotary_dial.png" style="height: 10em; "></div>
+    </td>
+    <td style="padding-left: 1em;">
+      <h1 style="color: #0b477c">dial.</h1>
+      <p style="font-size: 1em;color: gray;">das digitale ilse aichinger literaturverzeichnis</p>
+    </td>
+  </tr>
+</table>
+</a>
 
     <div class="row">
-      <div class="col-md-2 col-xs-2" style="padding-top: 6em;">
+      <div class="col-md-2 col-xs-2" style="padding-top: 2em; min-width: 7em;">
+        <form >
+          <input type="text" v-model="query" style="width: 100%" placeholder="Suche">
+        </form>
+
+        <p style="text-align: right; font-size: 0.8em;"><i>{{ searchResult.pagination.total }} Einträge</i></p>
         <div v-for="facet in searchResult.data.aggregations">
-          <h5 style="margin-bottom: 5px;"><strong style="color: black;"> {{ facet.title }} </strong></h5><!-- blau: #337ab7 -->
+          <h5 style="margin-bottom: 5px;"><strong style="color: black;"> {{ facet.title }} </strong></h5><!-- blau: #337ab7 Links: #0b477c-->
 
           <ul class="browse-list list-unstyled long-list" style="margin-bottom: 0;">
             <li v-for="bucket in facet.buckets">
@@ -65,8 +65,7 @@
       <div class="col-md-10 col-xs-10" style="padding-top: 2em;">
         <div class="breadcrumbs"></div>
         <div class="clearfix"></div>
-        <p>{{ searchResult.pagination.total }} Einträge</p>
-        <table class="table table-striped" style="table-layout:fixed;">
+        <table class="table table-striped" style="table-layout:fixed; min-width: 40em;">
           <tbody>
 
           	<tr style="border-bottom:2pt dotted black;">
@@ -77,10 +76,35 @@
             </tr>
 
             <tr v-for="item of searchResult.data.items">
-              <td><b>{{ item.title }} {{ item.subtitle }}</b><br/> <i style="padding-left:2em;">{{item.author}}</i></td>
-              <td><i>{{ item.journaltitle }}{{ item.booktitle }}{{item.maintitle}}</i>, {{ item.publisher }}: {{ item.location }}</td>
+
+              <td>
+                <span style="color: #0b477c;">
+                  <b v-if="item.subtitle">{{ item.title }} {{ item.subtitle }}</b>
+                  <b v-else>{{ item.title }}</b><br/>
+                </span>
+                <i v-if="item.author.length!=1">{{ item.author.join(' & ') }}</i>
+                <i v-else>{{ item.author.join('') }}</i>
+              </td>
+
+              <td>
+                <i v-if="item.journaltitle">{{ item.journaltitle }},<br/></i>
+                <i v-if="item.booktitle">{{ item.booktitle }},<br/></i>
+                <i v-if="item.maintitle">{{item.maintitle}},<br/></i>
+                  
+                <span v-if="item.publisher.length!=1">{{ item.publisher.join(' & ') }}</span>:
+                <span v-else>{{ item.publisher.join('') }}</span>:
+
+                <span v-if="item.location.length!=1">{{ item.location.join(' & ') }}</span>,
+                <span v-else>{{ item.location.join('') }}</span>,
+
+                S. {{ item.pages }}
+                <a v-if="item.url" v-bind:href="item.url"><br/>{{ item.url }}</span>
+              </td>
+
               <td style="word-wrap:break-word;">{{ item.date }}</td>
-              <td>{{ item.wikidata }}</td>
+
+              <td><a v-bind:href="'https://www.wikidata.org/wiki/' + item.wikidata">{{ item.wikidata }}</a></td>
+          
           </tr>
           </tbody>
         </table>
@@ -91,6 +115,12 @@
     </div>
   </div>
 </div>
+
+
+<div style="font-size: 1em; text-align: right; padding: 4em;">
+  <a href="https://github.com/diaphon/dial">github.com/diaphon/dial</a>
+</div>
+
 
 
 <script >
@@ -106,10 +136,13 @@ var configuration = {
   aggregations: {
     Erstpublikation: {
     	title: 'Erstpublikation',
+      order: 'asc',
     	size: 2
     },
 	  Jahrzehnt: {
       title: 'Jahrzehnt',
+      order: 'asc',
+      sort: 'term',
       size: 10
     },
     location: {
@@ -118,9 +151,11 @@ var configuration = {
     },
     ENTRYTYPE: {
       title: 'Medium',
+      order: 'asc',
+      sort: 'term',
       size: 10
     },
-    keywords: {
+    genre: {
       title: 'Genre',
       size: 5
     },
@@ -167,7 +202,8 @@ var vm = new Vue({
 
       var result = itemsjs.search({
         query: this.query,
-        filters: this.filters
+        filters: this.filters,
+        per_page: 20
       })
       return result
     }
