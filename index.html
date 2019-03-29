@@ -1,5 +1,22 @@
- <head>
-  <meta charset="UTF-8">
+<head>
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8" /> 
+  <title>dial</title>
+<!--   <style>
+    /*START ZEILEN NUMMERIEREN*/
+    .tafel table {
+      counter-reset: rowNumber;
+    }
+
+    .tafel table tr:not(:first-child) {
+      counter-increment: rowNumber;
+    }
+
+    .tafel table tr td:first-child::before {
+      content: counter(rowNumber) ". ";
+      min-width: 1em;
+      font-weight: bold;
+    }
+  </style> -->
 </head>
 
 <!-- 
@@ -14,13 +31,14 @@
 
 -->
 
-<script src="dial_test.js"></script>
-<!-- https://cdn.rawgit.com/itemsapi/itemsjs/master/dist/itemsjs.js -->
+<script src="dial.js"></script>
 <script src="itemsjs.js"></script>
-<!-- https://cdn.jsdelivr.net/vue/latest/vue.min.js -->
+<!-- https://cdn.rawgit.com/itemsapi/itemsjs/master/dist/itemsjs.js -->
 <script src="vue.min.js"></script>
-<!-- https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/css/bootstrap.min.css -->
+<!-- https://cdn.jsdelivr.net/vue/latest/vue.min.js -->
 <link href="bootstrap.min.css" rel="stylesheet"/>
+<!-- https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/css/bootstrap.min.css -->
+<link rel="shortcut icon" href="./favicon.ico">
 
 <div id="el">
   <div class="container" style="margin-top: 50px;">
@@ -29,23 +47,23 @@
 <table style="width:100%;">
   <tr>
     <td style="width: 16.6%"><div style="display: flex; justify-content: center; align-items: center;">
-      <img src="rotary_dial.png" style="height: 10em; "></div>
+      <img src="rotary_dial.png" style="height: 10em;"></div>
     </td>
     <td style="padding-left: 1em;">
       <h1 style="color: #0b477c">dial.</h1>
       <p style="font-size: 1em;color: gray;">das digitale ilse aichinger literaturverzeichnis</p>
     </td>
+    <td align="right" style="padding-top: 5em;"><i><span style="color: gray;">Stand: 29.3.2019</span></i></td>
   </tr>
 </table>
 </a>
-
     <div class="row">
       <div class="col-md-2 col-xs-2" style="padding-top: 2em; min-width: 7em;">
         <form >
           <input type="text" v-model="query" style="width: 100%" placeholder="Suche">
         </form>
 
-        <p style="text-align: right; font-size: 0.8em;"><i>{{ searchResult.pagination.total }} Einträge</i></p>
+        
         <div v-for="facet in searchResult.data.aggregations">
           <h5 style="margin-bottom: 5px;"><strong style="color: black;"> {{ facet.title }} </strong></h5><!-- blau: #337ab7 Links: #0b477c-->
 
@@ -62,10 +80,10 @@
         </div>
       </div>
 
-      <div class="col-md-10 col-xs-10" style="padding-top: 2em;">
+      <div class="col-md-10 col-xs-10" style="padding-top: 2em;"> <!-- "class += tafel" für nummerierung -->
         <div class="breadcrumbs"></div>
         <div class="clearfix"></div>
-        <table class="table table-striped" style="table-layout:fixed; min-width: 40em;">
+        <table class="table table-striped" style="table-layout:fixed; min-width: 40em;border-bottom:2px dotted gray;">
           <tbody>
 
           	<tr style="border-bottom:2pt dotted black;">
@@ -79,7 +97,7 @@
 
               <td>
                 <span style="color: #0b477c;">
-                  <b v-if="item.subtitle">{{ item.title }} {{ item.subtitle }}</b>
+                  <b v-if="item.subtitle">{{ item.title }} – {{ item.subtitle }}</b>
                   <b v-else>{{ item.title }}</b><br/>
                 </span>
                 <i v-if="item.author.length!=1">{{ item.author.join(' & ') }}</i>
@@ -91,13 +109,14 @@
                 <i v-if="item.booktitle">{{ item.booktitle }},<br/></i>
                 <i v-if="item.maintitle">{{item.maintitle}},<br/></i>
                   
-                <span v-if="item.publisher.length!=1">{{ item.publisher.join(' & ') }}</span>:
-                <span v-else>{{ item.publisher.join('') }}</span>:
+                <span v-if="item.publisher">
+                  <span v-if="item.publisher.length!=1">{{ item.publisher.join(' & ') }}:</span>
+                  <span v-else-if="item.publisher.length==1">{{ item.publisher.join('') }}:</span>
+                </span>
+                <div v-else><span v-else>[ohne Verlagsangabe]</span></div>
 
-                <span v-if="item.location.length!=1">{{ item.location.join(' & ') }}</span>,
-                <span v-else>{{ item.location.join('') }}</span>,
+                <span v-if="item.location">{{ item.location.join(' & ') }}</span><span v-if="item.pages">, {{ item.pages }}</span>
 
-                S. {{ item.pages }}
                 <a v-if="item.url" v-bind:href="item.url"><br/>{{ item.url }}</span>
               </td>
 
@@ -108,24 +127,32 @@
           </tr>
           </tbody>
         </table>
+
+        <div style="text-align:right;">
+        	<span>{{ searchResult.pagination.total }} Einträge</span>
+        	<!-- <span v-if="searchResult.pagination.total==1">1 Eintrag</span>
+          <span v-if="searchResult.pagination.total>42"> (<span style="background-color: yellow;font-weight: bold;">{{ searchResult.pagination.total - 42}} mehr Einträge als angezeigt vorhanden!</span>)</span> -->
+        </div>
+        
         <div class="clearfix"></div>
       </div>
 
       <div class="clearfix" style="margin-bottom: 100px;"></div>
     </div>
+  <div style="font-size: 0.8em; text-align: right; padding-bottom: 4em;">
+  script at <a href="https://github.com/diaphon/dial">github.com/diaphon/dial</a> <br/>based on <a href="https://github.com/itemsapi/itemsjs/">ItemsJS</a> (Apache License 2.0) <br/>with the help of <a href="https://github.com/bellerophons-pegasus">Martina</a>: thank you!
+</div>
   </div>
 </div>
 
 
-<div style="font-size: 1em; text-align: right; padding: 4em;">
-  <a href="https://github.com/diaphon/dial">github.com/diaphon/dial</a>
-</div>
+
 
 
 
 <script >
 var configuration = {
-  searchableFields: ['title', 'subtitle', 'booktitle', 'maintitle', 'date', 'author'],
+  searchableFields: ['title', 'subtitle', 'booktitle', 'maintitle', 'journaltitle', 'date', 'author', 'wikidata'],
   sortings: {
     date: {
       field: 'date',
@@ -149,20 +176,28 @@ var configuration = {
       title: 'Ort',
       size: 10
     },
-    ENTRYTYPE: {
+    journaltitle: {
       title: 'Medium',
-      order: 'asc',
-      sort: 'term',
       size: 10
     },
     genre: {
-      title: 'Genre',
+      title: 'Gattung',
       size: 5
     },
     author: {
       title: 'Autor',
-      size: 5
-    }
+      size: 5,
+    },
+    series: {
+      title: 'Serie',
+      size: 5,
+    },
+    seiten: {
+      title: 'Seitenanzahl',
+      order: 'asc',
+      sort: 'term',
+      size: 10
+    },
   }
 }
 
@@ -203,7 +238,8 @@ var vm = new Vue({
       var result = itemsjs.search({
         query: this.query,
         filters: this.filters,
-        per_page: 20
+        // per_page: 42 //* wieviele Einträge sollen anezeigt werden **/
+        per_page: 1900
       })
       return result
     }
